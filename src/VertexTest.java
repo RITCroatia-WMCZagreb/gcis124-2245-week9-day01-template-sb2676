@@ -18,7 +18,7 @@ public class VertexTest {
 
         // analyze
         assertEquals(expected, vertex.getValue());
-        Set<Vertex<String>> neighbors = vertex.getNeighbors();
+        Set<Vertex<String>> neighbors = vertex.getNeighbour();
         assertNotNull(neighbors);
         assertEquals(0, neighbors.size());
     }
@@ -34,7 +34,7 @@ public class VertexTest {
 
         // analyze
         assertTrue(vertexA.connected(vertexB));
-        Set<Vertex<String>> neighbors = vertexA.getNeighbors();
+        Set<Vertex<String>> neighbors = vertexA.getNeighbour();
         assertEquals(1, neighbors.size());
         assertTrue(neighbors.contains(vertexB));
     }
